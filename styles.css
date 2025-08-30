@@ -113,3 +113,62 @@ button:hover, .btn:hover, a button:hover, a.btn:hover {
     font-size: 1rem;
     font-weight: bold;
 }
+/* Navbar Styles */
+.header {
+  background: transparent;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #4da6ff;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  .nav.active {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
